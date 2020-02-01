@@ -1,0 +1,46 @@
+[
+  {
+    "region": "US-Mexico Border",
+    "total": 488
+  },
+  {
+    "region": "Sub Saharan Africa",
+    "total": 326
+  },
+  {
+    "region": "Mediterranean",
+    "total": 495
+  },
+  {
+   "region": "North Africa",
+    "total": 253
+  },
+  {
+   "region": "South East Asia",
+    "total": 138
+  },
+  {
+   "region": "South Asia",
+    "total": 78
+  },
+  {
+   "region": "South America",
+    "total": 33
+  },
+  {
+   "region": "Horn of Africa",
+    "total": 66
+  },
+  {
+    "region": "Middle East",
+    "total": 158
+  },
+  {
+    "region": "Europe",
+    "total": 129
+  },
+  {
+    "region": "Central America",
+    "total": 109
+  }
+]

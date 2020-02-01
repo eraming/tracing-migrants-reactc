@@ -1,0 +1,2 @@
+(this["webpackJsonptracingmigrants-react"]=this["webpackJsonptracingmigrants-react"]||[]).push([[0],[function(t,n,a){t.exports=a(1)},function(t,n){}],[[0,1]]]);
+//# sourceMappingURL=main.46dfa400.chunk.js.map
