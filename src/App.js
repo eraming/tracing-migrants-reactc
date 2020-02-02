@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-
+import Nav from './components/Nav/Nav.js';
 
 class App extends Component {
   state = {
@@ -86,36 +86,11 @@ onSelectChange = (ev) => {
       <div className="App">
       <header className="App-header"> </header>
       <div className="GridContainer">
-      <div className="Header">
+        <Nav />
 
-      <h1>2019 Recorded Migrant Deaths </h1>
-      <p> Data from <a href="https://missingmigrants.iom.int/">Missing Migrants Project</a>.</p>
-      <hr className="BottomLine" />
 
-      <p> Select from the drop down list to see records by month. If there are no records for the month,
-      data will not be displayed for that region. </p>
 
-      <select
-      value={this.state.value}
-      onChange={this.onSelectChange}
-      id="months"
-      className="Header">
-      >
-        <option value> -- reported month -- </option>
-        <option value="Jan">January</option>
-        <option value="Feb">February</option>
-        <option value="Mar">March</option>
-        <option value="Apr">April</option>
-        <option value="May">May</option>
-        <option value="Jun">June</option>
-        <option value="Jul">July</option>
-        <option value="Aug">August</option>
-        <option value="Sep">September</option>
-        <option value="Oct">October</option>
-        <option value="Nov">November</option>
-        <option value="Dec">December</option>
-      </select>
-</div> 
+</div>
       <div id="BarChart" className="BarChart">
 
 
@@ -157,7 +132,6 @@ onSelectChange = (ev) => {
 
 
       </div>
-</div>
 
     // return closing tag
     );
