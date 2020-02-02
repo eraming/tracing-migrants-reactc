@@ -44,15 +44,15 @@ class BarChart extends Component {
       <div id="BarChart" className="BarChart">
       {
 
-        this.props.value ? (
+        this.props.dropdownValue ? (
 
-         Object.keys(this.state.migrants2019).map(region => (
+         Object.keys(this.props.migrants2019).map(region => (
 
-          this.state.migrants2019[region] > 1 ? (
+          this.props.migrants2019[region] > 1 ? (
 
-           <div className="BarChart-bar" style={{width: this.state.migrants2019[region] * 9 + "px" }}>
+           <div className="BarChart-bar" style={{width: this.props.migrants2019[region] * 9 + "px" }}>
            {region}
-           <span className="total"> {this.state.migrants2019[region]} </span>
+           <span className="total"> {this.props.migrants2019[region]} </span>
            </div>
 
          ) : null
@@ -61,7 +61,7 @@ class BarChart extends Component {
 
          ) : (
 
-           this.state.regionTotals.map(data => (
+           this.props.regionTotals.map(data => (
              <div className="BarChart-bar" style={{width: data.total }} >
              {data.region}
              <span className="total"> {data.total} </span>

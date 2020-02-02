@@ -35,7 +35,7 @@ onSelectChange = (ev) => {
       .then(response => response.json())
       .then(fulldata => {
         let totals  = this.dataToTotals(fulldata, this.state.value)
-        console.log("this.state.value", this.state.value);
+        // console.log("this.state.value", this.state.value);
         console.log("totals", totals);
         this.setState({
           migrants2019: totals,
@@ -53,7 +53,9 @@ onSelectChange = (ev) => {
       <Nav />
 
       <BarChart
-      value={this.state.value}
+      dropdownValue={this.state.value}
+      migrants2019={this.state.migrants2019}
+      regionTotals={this.state.regionTotals}
       />
 
 
