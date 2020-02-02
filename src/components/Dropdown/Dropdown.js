@@ -8,9 +8,8 @@ class Dropdown extends Component {
     return (
 
       <select
-      value={this.props.value} 
+      value={this.props.value}
       onChange={this.onSelectChange}
-      id="months"
       >
 
         <option value> -- reported month -- </option>

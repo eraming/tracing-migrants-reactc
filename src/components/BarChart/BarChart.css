@@ -1,0 +1,50 @@
+
+#BarChart {
+  padding: 10px;
+  margin: 5px;
+  grid-column: 2;
+  grid-row: 2;
+  justify-content: center;
+
+}
+
+hr {
+    display: block;
+    grid-column: 2;
+    grid-row: 3;
+    height: 1px;
+    border: 0;
+    border-top: 5px solid #000000;
+    margin: 0;
+    padding: 2px;
+}
+
+.BarChart-max {
+  display: block;
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.BarChart-bar {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: #4592af;
+  padding: 8px;
+  margin: 5px;
+  color: #e3c4a8;
+  transition-duration: 0.4s;
+  display: flex;
+  justify-content: space-between;
+  min-width: 110px;
+  max-width: 500px;
+  max-height: 50px;
+}
+
+.BarChart-bar:nth-of-type(odd) {
+    background: #226089;
+}
+
+.BarChart-bar:hover{
+    transform: perspective(200px) translate3d(5px, 0, 2px);
+    background-color: #000000;
+}
