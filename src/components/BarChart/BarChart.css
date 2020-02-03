@@ -8,23 +8,6 @@
 
 }
 
-hr {
-    display: block;
-    grid-column: 2;
-    grid-row: 3;
-    height: 1px;
-    border: 0;
-    border-top: 5px solid #000000;
-    margin: 0;
-    padding: 2px;
-}
-
-.BarChart-max {
-  display: block;
-  grid-column: 3;
-  grid-row: 3;
-}
-
 .BarChart-bar {
   grid-column: 2;
   grid-row: 2;

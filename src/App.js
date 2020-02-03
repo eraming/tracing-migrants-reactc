@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Nav from './components/Nav/Nav.js';
 import BarChart from './components/BarChart/BarChart.js';
+import Dropdown from './components/Dropdown/Dropdown.js';
+import BottomLine from './components/BottomLine/BottomLine.js';
 
 class App extends Component {
   state = {
@@ -16,6 +18,8 @@ onSelectChange = (ev) => {
   this.onlyRegionTotals();
 
 }
+
+
   componentDidMount() {
     fetch("./region-total.json", { mode: 'cors', method: 'get', headers: { 'Access-Control-Allow-Origin': '*' }})
       .then(response => response.json())
@@ -43,6 +47,41 @@ onSelectChange = (ev) => {
       });
   }
 
+  dataToTotals(fulldata, selectedMonth){
+
+    let monthly_totals = {
+      'US-Mexico Border': 0,
+      'Sub-Saharan Africa': 0,
+      'Mediterranean': 0,
+      'North Africa': 0,
+      'South East Asia': 0,
+      'South Asia': 0,
+      'South America': 0,
+      'Horn of Africa': 0,
+      'Middle East': 0,
+      'Europe': 0,
+      'Central America': 0,
+    }
+
+    let region;
+    let dead;
+    let month;
+
+
+    for (let migrantInfo of fulldata) {
+        region = migrantInfo['Region of Incident'];
+        dead = parseFloat(migrantInfo['Number Dead']);
+        month = migrantInfo['Reported Month'];
+
+        if (region && month === selectedMonth) {
+            monthly_totals[region] += dead;
+            console.log(monthly_totals[region], region);
+        }
+      };
+
+      return monthly_totals
+  }
+
 
   render() {
 
@@ -50,7 +89,18 @@ onSelectChange = (ev) => {
       <div className="App">
       <header className="App-header"></header>
       <div className="GridContainer">
-      <Nav />
+      <div className="Header">
+
+      <Nav
+      value={this.state.value}
+      />
+
+      <Dropdown
+      value={this.props.value}
+      onSelectChange={this.onSelectChange}
+       />
+
+       </div>
 
       <BarChart
       dropdownValue={this.state.value}
@@ -60,9 +110,13 @@ onSelectChange = (ev) => {
 
 
       </div>
-      <div className="BarChart-max">max</div>
-      <hr className="BottomLine" />
+
+        <BottomLine /> 
+
+
+
       </div>
+
 
 
 

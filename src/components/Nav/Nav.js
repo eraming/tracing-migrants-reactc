@@ -15,14 +15,7 @@ class Nav extends Component {
       <p> Select from the drop down list to see records by month. If there are no records for the month,
       data will not be displayed for that region. </p>
 
-      <Dropdown
-      value={this.props.value}
-      onChange={this.onSelectChange}
-       />
-
       </div>
-
-// insert stuff here
 
 
     );

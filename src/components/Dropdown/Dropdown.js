@@ -3,13 +3,12 @@ import './Dropdown.css';
 
 class Dropdown extends Component {
 
-
   render() {
     return (
 
       <select
       value={this.props.value}
-      onChange={this.onSelectChange}
+      onChange={this.props.onSelectChange}
       >
 
         <option value> -- reported month -- </option>
