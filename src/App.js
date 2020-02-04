@@ -88,6 +88,7 @@ onSelectChange = (ev) => {
     return (
       <div className="App">
       <header className="App-header"></header>
+
       <div className="GridContainer">
       <div className="Header">
 
@@ -108,13 +109,11 @@ onSelectChange = (ev) => {
       regionTotals={this.state.regionTotals}
       />
 
+      <BottomLine />
+      <div className="BarChart-max">max</div>
+
 
       </div>
-
-        <BottomLine /> 
-
-
-
       </div>
 
 

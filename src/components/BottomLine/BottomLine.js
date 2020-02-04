@@ -5,10 +5,9 @@ class BottomLine extends Component {
 
   render() {
     return (
-
+      
       <hr className="BottomLine" />
 
-      {/*<div className="BarChart-max">max</div>*/}
 
 
     );
